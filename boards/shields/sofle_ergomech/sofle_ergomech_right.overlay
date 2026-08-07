@@ -54,11 +54,13 @@
         enable-power-management;
         // idle-sleep; // maximal power savings, but the trackpad takes ~300ms to
         //             // respond when the keyboard is idle. Not recommended.
-        // report-rate-lp2 = <640>; // lower LP2 report rate for less power draw
+        report-rate-lp2 = <640>; // 640ms report rate in LP2 state means 55uA draw
+                                  // rather than default 160ms 174uA draw
 
         // Tuning
         filter-settings = <0x0B>;
         hold-time = <500>;
+        scroll-angle = <30>; // The default angle (~47 deg) is too big
         sensitivity = <100>;
         scroll-sensitivity = <100>;
     };
