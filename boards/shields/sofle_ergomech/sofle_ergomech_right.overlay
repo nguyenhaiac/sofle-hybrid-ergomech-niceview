@@ -24,3 +24,46 @@
 &right_encoder {
     status = "okay";
 };
+
+// The trackpad replaces the OLED display on the right side, so the I2C bus is
+// used by the trackpad instead of the SSD1306 display.
+&oled {
+    status = "disabled";
+};
+
+&pro_micro_i2c {
+    status = "okay";
+
+    tps65: trackpad@74 {
+        compatible = "azoteq,tps43";
+        reg = <0x74>;
+        status = "okay";
+
+        // Gestures
+        single-tap;
+        two-finger-tap;
+        press-and-hold;
+        scroll;
+        zoom;
+        three-finger-swipe;
+        three-finger-swipe-throttle-ms = <1200>;
+        switch-xy;
+        invert-scroll-y;
+
+        // Power management
+        enable-power-management;
+        // idle-sleep; // maximal power savings, but the trackpad takes ~300ms to
+        //             // respond when the keyboard is idle. Not recommended.
+        // report-rate-lp2 = <640>; // lower LP2 report rate for less power draw
+
+        // Tuning
+        filter-settings = <0x0B>;
+        hold-time = <500>;
+        sensitivity = <100>;
+        scroll-sensitivity = <100>;
+    };
+};
+
+&trackpad_split {
+    device = <&tps65>;
+};

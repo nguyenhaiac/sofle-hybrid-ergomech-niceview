@@ -2,15 +2,20 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: AYM1607
-      url-base: https://github.com/AYM1607/zmk-driver-azoteq-iqs5xx
+    - name: geeksville
+      url-base: https://github.com/geeksville
+    - name: beekeeb
+      url-base: https://github.com/beekeeb
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: zmk-driver-azoteq-iqs5xx
-      remote: AYM1607
+    - name: zmk_driver_azoteq
+      remote: geeksville
+      revision: main
+    - name: zmk-input-zoom
+      remote: beekeeb
       revision: main
   self:
     path: config

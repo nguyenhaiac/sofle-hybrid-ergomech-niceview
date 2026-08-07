@@ -20,3 +20,11 @@
 &left_encoder {
     status = "okay";
 };
+
+&trackpad_listener {
+    status = "okay";
+};
+
+&zip_zoom_mapper {
+    status = "okay";
+};
