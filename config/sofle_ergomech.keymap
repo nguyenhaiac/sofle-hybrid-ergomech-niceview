@@ -35,7 +35,7 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp N1      &kp N2     &kp N3  &kp N4    &kp N5    &kp N6  &kp N7     &kp N8           &kp N9        &kp N0          &kp LC(BACKSPACE)  &kp BACKSPACE
+&kp GRAVE           &kp N1      &kp N2     &kp N3  &kp N4    &kp N5    &kp N6  &kp N7     &kp N8           &kp N9        &kp N0          &kp LC(BACKSPACE)  
 &kp TAB     &kp Q      &kp W   &kp F     &kp P     &kp G   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp BSLH
 &mo 2       &kp A      &kp R   &kp S     &kp T     &kp D   &kp H      &kp N            &kp E         &kp I           &kp O              &kp SQT
 &kp LSHIFT  &kp Z      &kp X   &kp C     &kp V     &kp B   &kp K      &kp M            &kp COMMA     &kp DOT         &kp FSLH           &mt RSHFT RET
@@ -60,7 +60,7 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &trans     &trans    &kp TILDE  &kp GRAVE  &trans    &trans         &kp HASH   &kp CARET    &trans    &trans         &trans
+&studio_unlock  &trans     &trans    &kp TILDE  &kp GRAVE  &trans    &trans         &kp HASH   &kp CARET    &trans    &trans         &trans
 &trans  &kp PRCNT  &kp AMPS  &kp QMARK  &kp PLUS   &kp AT    &kp DLLR       &kp UNDER  &kp LBKT     &kp RBKT  &kp EXCL       &trans
 &trans  &kp FSLH   &kp LPAR  &kp EQUAL  &kp N0     &kp LBRC  &kp RBRC       &kp N1     &kp STAR     &kp RPAR  &kp MINUS      &kp SQT
 &trans  &kp N6     &kp N7    &kp N8     &kp N9     &kp PIPE  &kp BACKSLASH  &kp N2     &kp N3       &kp N4    &kp N5         &trans
